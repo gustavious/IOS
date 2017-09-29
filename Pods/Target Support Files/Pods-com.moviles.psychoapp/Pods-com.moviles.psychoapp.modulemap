@@ -1,0 +1,6 @@
+framework module Pods_com_moviles_psychoapp {
+  umbrella header "Pods-com.moviles.psychoapp-umbrella.h"
+
+  export *
+  module * { export * }
+}
