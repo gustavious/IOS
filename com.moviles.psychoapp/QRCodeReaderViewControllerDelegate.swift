@@ -9,18 +9,33 @@
 import UIKit
 import AVFoundation
 import SwiftQRCode
+import Firebase
     
 
 class QRCodeReaderViewControllerDelegate: UIViewController	 {
     
-    
+    var ref: DatabaseReference!
+
+
     let scanner = QRCode()
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        ref = Database.database().reference()
+        
+       
+    
+        
+        
+        
         
         scanner.prepareScan(view) { (stringValue) -> () in
             print(stringValue)
+            self.addTest(id: stringValue)
+            self.dismiss(animated: true, completion: nil)
+            
+            
         }
         scanner.scanFrame = view.bounds
     }
@@ -31,5 +46,26 @@ class QRCodeReaderViewControllerDelegate: UIViewController	 {
         // start scan
         scanner.startScan()
     }
+    
+    
+    func addTest(id:String){
+        
+        let userID = Auth.auth().currentUser?.uid
+        
+        let key = ref.child("candidates").child(userID!).child("exams")
+        
+        let post = [id]
+        let childUpdates = ["/candidates/\(userID)/exams/\(key)": post]
+        ref.updateChildValues(childUpdates)
+    
+        
+    }
+    
+    @IBAction func cancel(_ sender: Any) {
+        
+            self.dismiss(animated: true, completion: nil)
+
+    }
+
    
 }
