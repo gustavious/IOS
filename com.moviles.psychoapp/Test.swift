@@ -8,6 +8,38 @@
 
 import UIKit
 
-class Test: NSObject {
 
+class Test: NSObject {
+    
+    var id: String!
+    var maxValue: Double?
+    var time: Double?
+    var weight: Double?
+    var testDescription: String?
+    var instructions: String?
+    var name: String?
+    var privateId: String?
+    
+    override init(){
+        super.init()
+    }
+    
+    
+    convenience init(_ dict: Dictionary<String, AnyObject>) {
+        
+        self.init()
+        print(dict)
+        
+        id = dict["id"] as! String!
+        maxValue = dict["maxValue"] as! Double?
+        time = dict["employer"] as! Double?
+        weight = dict["weight"] as! Double?
+        testDescription = dict["testDescription"] as! String!
+        instructions = dict["instructions"] as! String?
+        name = dict["name"] as! String?
+        privateId = dict["privateId"] as! String?
+        
+      
+        
+    }
 }

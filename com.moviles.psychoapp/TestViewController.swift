@@ -9,6 +9,15 @@
 import UIKit
 
 class TestViewController: UIViewController {
+    
+    var test: Test!
+    
+    
+    @IBOutlet weak var labelName: UILabel!
+    
+    @IBOutlet weak var labelTime: UILabel!
+    @IBOutlet weak var labelMaxScore: UILabel!
+    @IBOutlet weak var labelWeight: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()

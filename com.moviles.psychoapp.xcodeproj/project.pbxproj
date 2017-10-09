@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630A04601F8A967D002F4334 /* QRCodeReaderViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630A045F1F8A967D002F4334 /* QRCodeReaderViewControllerDelegate.swift */; };
+		630A04641F8A98F9002F4334 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630A04631F8A98F9002F4334 /* AVFoundation.framework */; };
+		630A04661F8A994D002F4334 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630A04651F8A994D002F4334 /* CoreData.framework */; };
+		630A046A1F8A9B0C002F4334 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630A04691F8A9B0C002F4334 /* RegisterViewController.swift */; };
+		63839B911F8AB240002C6A84 /* SwiftQRCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63839B901F8AB240002C6A84 /* SwiftQRCode.framework */; };
+		63839B931F8AF007002C6A84 /* ExamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63839B921F8AF007002C6A84 /* ExamsViewController.swift */; };
+		63839B951F8AF073002C6A84 /* Exam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63839B941F8AF073002C6A84 /* Exam.swift */; };
+		63839B971F8AF08C002C6A84 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63839B961F8AF08C002C6A84 /* Test.swift */; };
+		63839B9B1F8B3224002C6A84 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63839B9A1F8B3224002C6A84 /* ResultsViewController.swift */; };
+		63839B9E1F8B325F002C6A84 /* ExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63839B9D1F8B325F002C6A84 /* ExamViewController.swift */; };
+		63839BA01F8B3274002C6A84 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63839B9F1F8B3274002C6A84 /* TestViewController.swift */; };
+		63839BA21F8B3851002C6A84 /* AccelerometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63839BA11F8B3851002C6A84 /* AccelerometerViewController.swift */; };
+		63839BA61F8B389B002C6A84 /* OpenQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63839BA51F8B389B002C6A84 /* OpenQuestionViewController.swift */; };
+		63839BA81F8B4D8F002C6A84 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63839BA71F8B4D8F002C6A84 /* LocalAuthentication.framework */; };
 		A2B9B8E11F7EA553001A8414 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B9B8E01F7EA553001A8414 /* AppDelegate.swift */; };
 		A2B9B8E31F7EA553001A8414 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B9B8E21F7EA553001A8414 /* ViewController.swift */; };
 		A2B9B8E61F7EA553001A8414 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2B9B8E41F7EA553001A8414 /* Main.storyboard */; };
@@ -17,6 +31,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		630A045F1F8A967D002F4334 /* QRCodeReaderViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReaderViewControllerDelegate.swift; sourceTree = "<group>"; };
+		630A04611F8A98EB002F4334 /* QRCodeReader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QRCodeReader.framework; path = "Pods/../build/Debug-iphoneos/QRCodeReader.swift/QRCodeReader.framework"; sourceTree = "<group>"; };
+		630A04631F8A98F9002F4334 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		630A04651F8A994D002F4334 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		630A04691F8A9B0C002F4334 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		63839B901F8AB240002C6A84 /* SwiftQRCode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftQRCode.framework; path = "../../Library/Developer/Xcode/DerivedData/com.moviles.psychoapp-agtxtpwenuosvqabjqzdbjlapcff/Build/Products/Debug-iphonesimulator/SwiftQRCode/SwiftQRCode.framework"; sourceTree = "<group>"; };
+		63839B921F8AF007002C6A84 /* ExamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamsViewController.swift; sourceTree = "<group>"; };
+		63839B941F8AF073002C6A84 /* Exam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exam.swift; sourceTree = "<group>"; };
+		63839B961F8AF08C002C6A84 /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		63839B9A1F8B3224002C6A84 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		63839B9D1F8B325F002C6A84 /* ExamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamViewController.swift; sourceTree = "<group>"; };
+		63839B9F1F8B3274002C6A84 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		63839BA11F8B3851002C6A84 /* AccelerometerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerometerViewController.swift; sourceTree = "<group>"; };
+		63839BA51F8B389B002C6A84 /* OpenQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenQuestionViewController.swift; sourceTree = "<group>"; };
+		63839BA71F8B4D8F002C6A84 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		7C1905319338911691ACA589 /* Pods-com.moviles.psychoapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-com.moviles.psychoapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-com.moviles.psychoapp/Pods-com.moviles.psychoapp.release.xcconfig"; sourceTree = "<group>"; };
 		A2B9B8DD1F7EA553001A8414 /* com.moviles.psychoapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = com.moviles.psychoapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B9B8E01F7EA553001A8414 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +64,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63839BA81F8B4D8F002C6A84 /* LocalAuthentication.framework in Frameworks */,
+				63839B911F8AB240002C6A84 /* SwiftQRCode.framework in Frameworks */,
+				630A04661F8A994D002F4334 /* CoreData.framework in Frameworks */,
+				630A04641F8A98F9002F4334 /* AVFoundation.framework in Frameworks */,
 				FF76EDFA52CCBB85221A0373 /* Pods_com_moviles_psychoapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,6 +78,11 @@
 		2548176692A1EE5161000C76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				63839BA71F8B4D8F002C6A84 /* LocalAuthentication.framework */,
+				63839B901F8AB240002C6A84 /* SwiftQRCode.framework */,
+				630A04651F8A994D002F4334 /* CoreData.framework */,
+				630A04631F8A98F9002F4334 /* AVFoundation.framework */,
+				630A04611F8A98EB002F4334 /* QRCodeReader.framework */,
 				AB9F9D7925AF2454D31AEDCC /* Pods_com_moviles_psychoapp.framework */,
 			);
 			name = Frameworks;
@@ -57,6 +95,26 @@
 				7C1905319338911691ACA589 /* Pods-com.moviles.psychoapp.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		6381C20E1F8A8B5300467BB3 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				63839B941F8AF073002C6A84 /* Exam.swift */,
+				63839B961F8AF08C002C6A84 /* Test.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		63839B9C1F8B3235002C6A84 /* TakeTestController */ = {
+			isa = PBXGroup;
+			children = (
+				63839B9D1F8B325F002C6A84 /* ExamViewController.swift */,
+				63839B9F1F8B3274002C6A84 /* TestViewController.swift */,
+				63839BA11F8B3851002C6A84 /* AccelerometerViewController.swift */,
+				63839BA51F8B389B002C6A84 /* OpenQuestionViewController.swift */,
+			);
+			name = TakeTestController;
 			sourceTree = "<group>";
 		};
 		A2B9B8D41F7EA552001A8414 = {
@@ -80,6 +138,8 @@
 		A2B9B8DF1F7EA553001A8414 /* com.moviles.psychoapp */ = {
 			isa = PBXGroup;
 			children = (
+				63839B9C1F8B3235002C6A84 /* TakeTestController */,
+				6381C20E1F8A8B5300467BB3 /* Entities */,
 				A2B9B8E01F7EA553001A8414 /* AppDelegate.swift */,
 				A2B9B8E21F7EA553001A8414 /* ViewController.swift */,
 				A2B9B8E41F7EA553001A8414 /* Main.storyboard */,
@@ -87,6 +147,10 @@
 				A2B9B8E91F7EA553001A8414 /* LaunchScreen.storyboard */,
 				A2B9B8EC1F7EA553001A8414 /* Info.plist */,
 				A2B9B8F21F7EAACB001A8414 /* GoogleService-Info.plist */,
+				630A045F1F8A967D002F4334 /* QRCodeReaderViewControllerDelegate.swift */,
+				630A04691F8A9B0C002F4334 /* RegisterViewController.swift */,
+				63839B921F8AF007002C6A84 /* ExamsViewController.swift */,
+				63839B9A1F8B3224002C6A84 /* ResultsViewController.swift */,
 			);
 			path = com.moviles.psychoapp;
 			sourceTree = "<group>";
@@ -169,9 +233,30 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-com.moviles.psychoapp/Pods-com.moviles.psychoapp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftQRCode/SwiftQRCode.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftQRCode.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -184,9 +269,19 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-com.moviles.psychoapp/Pods-com.moviles.psychoapp-resources.sh",
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle,
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseFacebookAuthUI.bundle,
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseGoogleAuthUI.bundle,
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebasePhoneAuthUI.bundle,
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseTwitterAuthUI.bundle,
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -199,13 +294,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-com.moviles.psychoapp-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -215,8 +313,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63839BA61F8B389B002C6A84 /* OpenQuestionViewController.swift in Sources */,
+				63839BA01F8B3274002C6A84 /* TestViewController.swift in Sources */,
 				A2B9B8E31F7EA553001A8414 /* ViewController.swift in Sources */,
+				630A04601F8A967D002F4334 /* QRCodeReaderViewControllerDelegate.swift in Sources */,
+				63839B951F8AF073002C6A84 /* Exam.swift in Sources */,
+				63839B971F8AF08C002C6A84 /* Test.swift in Sources */,
 				A2B9B8E11F7EA553001A8414 /* AppDelegate.swift in Sources */,
+				63839B9E1F8B325F002C6A84 /* ExamViewController.swift in Sources */,
+				63839BA21F8B3851002C6A84 /* AccelerometerViewController.swift in Sources */,
+				630A046A1F8A9B0C002F4334 /* RegisterViewController.swift in Sources */,
+				63839B931F8AF007002C6A84 /* ExamsViewController.swift in Sources */,
+				63839B9B1F8B3224002C6A84 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +448,10 @@
 			baseConfigurationReference = AAE9B6A5F595296105175D35 /* Pods-com.moviles.psychoapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/QRCodeReader.swift",
+				);
 				INFOPLIST_FILE = com.moviles.psychoapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "psy.com-moviles-psychoapp";
@@ -353,6 +465,10 @@
 			baseConfigurationReference = 7C1905319338911691ACA589 /* Pods-com.moviles.psychoapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/QRCodeReader.swift",
+				);
 				INFOPLIST_FILE = com.moviles.psychoapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "psy.com-moviles-psychoapp";

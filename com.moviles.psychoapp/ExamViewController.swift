@@ -7,13 +7,38 @@
 //
 
 import UIKit
+import Firebase
 
-class ExamViewController: UIViewController {
+class ExamViewController: UIViewController, UITableViewDelegate , UITableViewDataSource {
+    
+    var exam: Exam!
+    var ref: DatabaseReference!
+    
+    var tests:[Test] = [Test]()
+    
+    
+    @IBOutlet weak var labelCompany: UILabel!
+    @IBOutlet weak var labelName: UILabel!
+    @IBOutlet weak var labelDescription: UILabel!
+    
+    
+    
+    
+    @IBOutlet weak var testTable: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        testTable.delegate = self
+        testTable.dataSource = self
+       
+        tests =  exam.testList
+      
+        labelName.text = exam.name
+        labelCompany.text = exam.company
+        labelDescription.text = exam.testDescription
+    
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,5 +56,41 @@ class ExamViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tests.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "TestCell", for: indexPath)
+        
+        let currentTest: Test = tests[indexPath.row]
+        
+        let labelName: UILabel = cell.viewWithTag(1) as! UILabel
+        labelName.text = currentTest.name!
+     
+        
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Clickea una celda")
+        let selected: Test = tests[indexPath.row]
+        
+        self.performSegue(withIdentifier: "ShowTestView", sender: selected)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowTestView"{
+            
+            let viewController: TestViewController = segue.destination as! TestViewController
+            viewController.test = sender as! Test
+            
+            
+        }
+    }
+
 
 }
