@@ -14,30 +14,45 @@ class TestViewController: UIViewController {
     var exam: Exam!
     
     
-    @IBOutlet weak var labelName: UILabel!
-    @IBOutlet weak var labelTime: UILabel!
-    @IBOutlet weak var labelMaxScore: UILabel!
-    @IBOutlet weak var labelWeight: UILabel!
-    @IBOutlet weak var labelInstructions: UILabel!
+    @IBOutlet weak var labelName: UILabel?
+    @IBOutlet weak var labelTime: UILabel?
+    @IBOutlet weak var labelMaxScore: UILabel?
+    @IBOutlet weak var labelWeight: UILabel?
+    @IBOutlet weak var labelInstructions: UILabel?
     
+    @IBOutlet weak var labelDesc: UILabel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        print(exam.testList.count)
+        if(exam.testList.count == 0){
+            
+          
+            self.performSegue(withIdentifier: "ShowIndex", sender: nil)
+
+           
+            
+        }
+        else{
+        
         test = exam.testList[0]
+            
+            print(test.time)
 
         
         // Do any additional setup after loading the view.
         
+        labelDesc?.text = test.testDescription
         
-        labelName.text = test.name
-        labelTime.text = test.time?.description
-        labelWeight.text = test.weight?.description
-        labelInstructions.text = test.instructions
-        labelMaxScore.text = test.maxValue?.description
+        labelName?.text = test.name
+        labelTime?.text = test.time?.description
+        labelWeight?.text = test.weight?.description
+        labelInstructions?.text = test.instructions
+        labelMaxScore?.text = test.maxValue?.description
         
-       
-        
+        }
         
     }
 
@@ -59,9 +74,17 @@ class TestViewController: UIViewController {
 
     @IBAction func takeTest(_ sender: Any) {
         
+      
+        if(exam.testList.count == 0){
+            
+            
+            self.performSegue(withIdentifier: "ShowIndex", sender: nil)
+            
+    
+            
+        }
         
-        
-        if(exam.testList[0].privateId == "ACCELEROMETER"){
+        else if(exam.testList[0].privateId == "ACCELEROMETER"){
         
         self.performSegue(withIdentifier: "ShowAccelerometer", sender: exam)
         }
@@ -88,6 +111,13 @@ class TestViewController: UIViewController {
             
             let viewController: OpenQuestionViewController = segue.destination as! OpenQuestionViewController
             viewController.exam = sender as! Exam
+            
+            
+        }
+        else if segue.identifier == "ShowIndex"{
+            
+            
+            let viewController:ExamsViewController = segue.destination as! ExamsViewController
             
             
         }

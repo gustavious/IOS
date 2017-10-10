@@ -15,6 +15,25 @@ class AccelerometerViewController: UIViewController {
     var test: Test!
     var exam: Exam!
     
+    
+
+    @IBOutlet weak var countDownLabel: UILabel!
+    var count = 10
+    
+
+    
+    func update() {
+        
+        if(count >= 0){
+            let minutes = String(count / 60)
+            let seconds = String(count % 60)
+            countDownLabel.text =  seconds
+            count -= 1
+        }
+        
+    }
+    
+    
     @IBOutlet weak var label: UILabel!
     
       var motion: CMMotionManager!
@@ -22,7 +41,12 @@ class AccelerometerViewController: UIViewController {
     
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
+        var timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(AccelerometerViewController.update), userInfo: nil, repeats: true)
+        
+        
         
         motion = CMMotionManager()
         
@@ -64,11 +88,11 @@ class AccelerometerViewController: UIViewController {
                                repeats: true, block: { (timer) in
                                 // Get the accelerometer data.
                                 if let data = self.motion.accelerometerData {
-                                    let x = data.acceleration.x
-                                    let y = data.acceleration.y
-                                    let z = data.acceleration.z
+                                    self.label.text = "X:" + String(data.acceleration.x) +
+                                        " Y:" + String(data.acceleration.y) +
+                                        " Z:" + String(data.acceleration.z)
+
                                     
-                                    print(x )
                                 }
             })
             
@@ -88,18 +112,23 @@ class AccelerometerViewController: UIViewController {
     }
     
     
+    
     @IBAction func send(_ sender: Any) {
+        
         
         exam.testList.remove(at: 0)
         
+        
         let data = exam
-        let destinationViewController = TestViewController(nibName: "TestViewController", bundle: nil)
-        destinationViewController.exam = data
-        present(destinationViewController, animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller:TestViewController = storyboard.instantiateViewController(withIdentifier: "TestView") as! TestViewController
+        controller.exam = data
+        self.present(controller, animated: true, completion: nil)
         
-        
-        
+
     }
+    
+
     
     
     

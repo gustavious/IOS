@@ -21,6 +21,8 @@ class ExamsViewController: UIViewController, UITableViewDelegate , UITableViewDa
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("Entra a los examenes")
         ref = Database.database().reference()
         ExamsTable.delegate = self
         ExamsTable.dataSource = self
@@ -41,10 +43,12 @@ class ExamsViewController: UIViewController, UITableViewDelegate , UITableViewDa
             // Get user value
             
             let value = snapshot.value as! NSDictionary
-            let exams = value["exams"] as! NSDictionary
+            let exams = value["exams"] as? NSDictionary
             
             
-            for item in exams {
+            if(exams != nil){
+            
+            for item in exams! {
                 
                 var dict = [String : AnyObject]()
                 var values = item.value as! Dictionary<String, AnyObject>
@@ -88,8 +92,10 @@ class ExamsViewController: UIViewController, UITableViewDelegate , UITableViewDa
                             var values = item.value as! Dictionary<String, AnyObject>
                             
                             dict["id"] = item.key as AnyObject?
-                            dict["maxValue"] = values["time"]
+                            dict["time"] = values["time"]
+                            dict["maxValue"] = values["maxValue"]
                             dict["weight"] = values["weight"]
+                            dict["instructions"] = values["instructions"]
                             
                             
                             
@@ -99,7 +105,6 @@ class ExamsViewController: UIViewController, UITableViewDelegate , UITableViewDa
                                 
                                 
                                 dict["testDescription"] = params["description"]
-                                dict["instructions"] = params["instructions"]
                                 dict["name"] = params["name"]
                                 dict["privateId"] = params["privateId"]
                                 
@@ -126,7 +131,7 @@ class ExamsViewController: UIViewController, UITableViewDelegate , UITableViewDa
                     print(error.localizedDescription)
                 }
 
-            
+                }
            
             }
             
@@ -134,6 +139,7 @@ class ExamsViewController: UIViewController, UITableViewDelegate , UITableViewDa
         }) { (error) in
             print(error.localizedDescription)
         }
+        
         
         
     }
@@ -163,11 +169,13 @@ class ExamsViewController: UIViewController, UITableViewDelegate , UITableViewDa
         
         let currentExam: Exam = exams[indexPath.row]
         
-        let labelName: UILabel = cell.viewWithTag(1) as! UILabel
-        labelName.text = currentExam.title!
+        print(currentExam.title)
         
-        let labelCompany: UILabel = cell.viewWithTag(2) as! UILabel
-        labelCompany.text = currentExam.company!
+        let labelName: UILabel? = cell.viewWithTag(1) as? UILabel
+        labelName?.text = currentExam.title
+        
+        let labelCompany: UILabel? = cell.viewWithTag(2) as? UILabel
+        labelCompany?.text = currentExam.company
         
  
         
@@ -195,6 +203,9 @@ class ExamsViewController: UIViewController, UITableViewDelegate , UITableViewDa
             
         }
     }
+    
+    
+    
     
     
    

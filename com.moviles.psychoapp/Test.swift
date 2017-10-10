@@ -1,3 +1,4 @@
+
 //
 //  Test.swift
 //  com.moviles.psychoapp
@@ -32,7 +33,7 @@ class Test: NSObject {
         
         id = dict["id"] as! String!
         maxValue = dict["maxValue"] as! Double?
-        time = dict["employer"] as! Double?
+        time = dict["time"] as! Double?
         weight = dict["weight"] as! Double?
         testDescription = dict["testDescription"] as! String!
         instructions = dict["instructions"] as! String?

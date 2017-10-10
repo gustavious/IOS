@@ -34,7 +34,7 @@ class ExamViewController: UIViewController, UITableViewDelegate , UITableViewDat
        
         tests =  exam.testList
       
-        labelName.text = exam.name
+        labelName.text = exam.title
         labelCompany.text = exam.company
         labelDescription.text = exam.testDescription
     
@@ -92,15 +92,23 @@ class ExamViewController: UIViewController, UITableViewDelegate , UITableViewDat
     }
     
     @IBAction func takeExam(_ sender: Any) {
-        
+    
         
         let data = exam
-        let destinationViewController = TestViewController(nibName: "TestViewController", bundle: nil)
-        destinationViewController.exam = data
-        present(destinationViewController, animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller:TestViewController = storyboard.instantiateViewController(withIdentifier: "TestView") as! TestViewController
+        controller.exam = data
+        self.present(controller, animated: true, completion: nil)
+        
         
         
     }
+    
+    @IBAction func cancel(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+
+    }
+    
     
     
     

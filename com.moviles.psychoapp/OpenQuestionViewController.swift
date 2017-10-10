@@ -13,11 +13,20 @@ class OpenQuestionViewController: UIViewController {
     
     var test: Test!
     var exam: Exam!
+    @IBOutlet weak var labelDesc: UILabel!
+    @IBOutlet weak var labelQuest: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        if(test != nil){
+        
+        labelDesc?.text = test.instructions
+        labelQuest?.text = test.name
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,10 +48,12 @@ class OpenQuestionViewController: UIViewController {
         
         exam.testList.remove(at: 0)
         
+        
         let data = exam
-        let destinationViewController = TestViewController(nibName: "TestViewController", bundle: nil)
-        destinationViewController.exam = data
-        present(destinationViewController, animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller:TestViewController = storyboard.instantiateViewController(withIdentifier: "TestView") as! TestViewController
+        controller.exam = data
+        self.present(controller, animated: true, completion: nil)
 
     }
 

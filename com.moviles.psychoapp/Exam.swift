@@ -52,7 +52,7 @@ class Exam: NSObject {
         
         testDescription = dict["description"] as! String!
         company = dict["company"] as! String?
-        title = dict["employer"] as! String?
+        title = dict["title"] as! String?
         user = dict["user"] as! String?
         username = dict["username"] as! String?
         

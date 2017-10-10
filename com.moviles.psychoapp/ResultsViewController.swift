@@ -113,14 +113,14 @@ class ResultsViewController: UIViewController, UITableViewDelegate , UITableView
         
         let currentExam: Exam = exams[indexPath.row]
         
-        let labelName: UILabel = cell.viewWithTag(1) as! UILabel
-        labelName.text = currentExam.name!
+        let labelName: UILabel? = cell.viewWithTag(1) as? UILabel
+        labelName?.text = currentExam.title
         
-        let labelCompany: UILabel = cell.viewWithTag(2) as! UILabel
-        labelCompany.text = currentExam.company!
+        let labelCompany: UILabel? = cell.viewWithTag(2) as? UILabel
+        labelCompany?.text = currentExam.company
         
-        let labelResult: UILabel = cell.viewWithTag(3) as! UILabel
-        labelResult.text = currentExam.score?.description
+        let labelResult: UILabel? = cell.viewWithTag(3) as? UILabel
+        labelResult?.text = currentExam.score?.description
         
         
         
