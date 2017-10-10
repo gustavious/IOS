@@ -164,13 +164,12 @@ class ExamsViewController: UIViewController, UITableViewDelegate , UITableViewDa
         let currentExam: Exam = exams[indexPath.row]
         
         let labelName: UILabel = cell.viewWithTag(1) as! UILabel
-        labelName.text = currentExam.name!
+        labelName.text = currentExam.title!
         
         let labelCompany: UILabel = cell.viewWithTag(2) as! UILabel
         labelCompany.text = currentExam.company!
         
-        let labelTime: UILabel = cell.viewWithTag(3) as! UILabel
-        labelTime.text = currentExam.time!.description
+ 
         
         let labelDescription: UILabel = cell.viewWithTag(4) as! UILabel
         labelDescription.text = currentExam.testDescription!
@@ -196,6 +195,8 @@ class ExamsViewController: UIViewController, UITableViewDelegate , UITableViewDa
             
         }
     }
+    
+    
    
         
         

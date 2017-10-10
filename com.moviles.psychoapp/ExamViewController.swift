@@ -88,9 +88,25 @@ class ExamViewController: UIViewController, UITableViewDelegate , UITableViewDat
             let viewController: TestViewController = segue.destination as! TestViewController
             viewController.test = sender as! Test
             
-            
-        }
+            }
     }
+    
+    @IBAction func takeExam(_ sender: Any) {
+        
+        
+        let data = exam
+        let destinationViewController = TestViewController(nibName: "TestViewController", bundle: nil)
+        destinationViewController.exam = data
+        present(destinationViewController, animated: true, completion: nil)
+        
+        
+    }
+    
+    
+    
+    
+    
+    
 
 
 }

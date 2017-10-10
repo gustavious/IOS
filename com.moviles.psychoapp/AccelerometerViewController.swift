@@ -12,6 +12,8 @@ import CoreMotion
 class AccelerometerViewController: UIViewController {
     
     
+    var test: Test!
+    var exam: Exam!
     
     @IBOutlet weak var label: UILabel!
     
@@ -84,5 +86,23 @@ class AccelerometerViewController: UIViewController {
         }
         
     }
+    
+    
+    @IBAction func send(_ sender: Any) {
+        
+        exam.testList.remove(at: 0)
+        
+        let data = exam
+        let destinationViewController = TestViewController(nibName: "TestViewController", bundle: nil)
+        destinationViewController.exam = data
+        present(destinationViewController, animated: true, completion: nil)
+        
+        
+        
+    }
+    
+    
+    
+    
 
 }

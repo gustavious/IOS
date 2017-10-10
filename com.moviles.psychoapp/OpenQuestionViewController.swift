@@ -9,6 +9,10 @@
 import UIKit
 
 class OpenQuestionViewController: UIViewController {
+    
+    
+    var test: Test!
+    var exam: Exam!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,5 +35,15 @@ class OpenQuestionViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func send(_ sender: Any) {
+        
+        exam.testList.remove(at: 0)
+        
+        let data = exam
+        let destinationViewController = TestViewController(nibName: "TestViewController", bundle: nil)
+        destinationViewController.exam = data
+        present(destinationViewController, animated: true, completion: nil)
+
+    }
 
 }

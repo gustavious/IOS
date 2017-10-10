@@ -23,10 +23,10 @@
 		63839BA81F8B4D8F002C6A84 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63839BA71F8B4D8F002C6A84 /* LocalAuthentication.framework */; };
 		A2B9B8E11F7EA553001A8414 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B9B8E01F7EA553001A8414 /* AppDelegate.swift */; };
 		A2B9B8E31F7EA553001A8414 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B9B8E21F7EA553001A8414 /* ViewController.swift */; };
-		A2B9B8E61F7EA553001A8414 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2B9B8E41F7EA553001A8414 /* Main.storyboard */; };
 		A2B9B8E81F7EA553001A8414 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2B9B8E71F7EA553001A8414 /* Assets.xcassets */; };
 		A2B9B8EB1F7EA553001A8414 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2B9B8E91F7EA553001A8414 /* LaunchScreen.storyboard */; };
 		A2B9B8F31F7EAACB001A8414 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2B9B8F21F7EAACB001A8414 /* GoogleService-Info.plist */; };
+		A2BF33D91F8C404400D87D22 /* wsw in Resources */ = {isa = PBXBuildFile; fileRef = A2B9B8E41F7EA553001A8414 /* wsw */; };
 		FF76EDFA52CCBB85221A0373 /* Pods_com_moviles_psychoapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9F9D7925AF2454D31AEDCC /* Pods_com_moviles_psychoapp.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +50,7 @@
 		A2B9B8DD1F7EA553001A8414 /* com.moviles.psychoapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = com.moviles.psychoapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B9B8E01F7EA553001A8414 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2B9B8E21F7EA553001A8414 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A2B9B8E51F7EA553001A8414 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A2B9B8E51F7EA553001A8414 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Base; path = Base.lproj/wsw; sourceTree = "<group>"; };
 		A2B9B8E71F7EA553001A8414 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2B9B8EA1F7EA553001A8414 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2B9B8EC1F7EA553001A8414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 				6381C20E1F8A8B5300467BB3 /* Entities */,
 				A2B9B8E01F7EA553001A8414 /* AppDelegate.swift */,
 				A2B9B8E21F7EA553001A8414 /* ViewController.swift */,
-				A2B9B8E41F7EA553001A8414 /* Main.storyboard */,
+				A2B9B8E41F7EA553001A8414 /* wsw */,
 				A2B9B8E71F7EA553001A8414 /* Assets.xcassets */,
 				A2B9B8E91F7EA553001A8414 /* LaunchScreen.storyboard */,
 				A2B9B8EC1F7EA553001A8414 /* Info.plist */,
@@ -220,7 +220,7 @@
 				A2B9B8EB1F7EA553001A8414 /* LaunchScreen.storyboard in Resources */,
 				A2B9B8F31F7EAACB001A8414 /* GoogleService-Info.plist in Resources */,
 				A2B9B8E81F7EA553001A8414 /* Assets.xcassets in Resources */,
-				A2B9B8E61F7EA553001A8414 /* Main.storyboard in Resources */,
+				A2BF33D91F8C404400D87D22 /* wsw in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,12 +331,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A2B9B8E41F7EA553001A8414 /* Main.storyboard */ = {
+		A2B9B8E41F7EA553001A8414 /* wsw */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A2B9B8E51F7EA553001A8414 /* Base */,
 			);
-			name = Main.storyboard;
+			name = wsw;
 			sourceTree = "<group>";
 		};
 		A2B9B8E91F7EA553001A8414 /* LaunchScreen.storyboard */ = {

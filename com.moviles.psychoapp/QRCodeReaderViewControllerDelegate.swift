@@ -60,12 +60,11 @@ class QRCodeReaderViewControllerDelegate: UIViewController	 {
     
         
     }
-    
-    @IBAction func cancel(_ sender: Any) {
-        
-            self.dismiss(animated: true, completion: nil)
+    @IBAction func quit(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
 
     }
-
+    
+   
    
 }
