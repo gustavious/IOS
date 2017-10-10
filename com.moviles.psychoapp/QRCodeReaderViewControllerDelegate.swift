@@ -27,9 +27,18 @@ class QRCodeReaderViewControllerDelegate: UIViewController	 {
        
     
         
-         self.addTest(id: "-KvyJ712CdQbM-penwz5")
+        // self.addTest(id: "-KvyJ712CdQbM-penwz5")
         
         //self.addTest(id: "-Kvy13dJ-eaU7kMU1Hdb")
+        
+        scanner.prepareScan(view) { (stringValue) -> () in
+            print(stringValue)
+            self.addTest(id: stringValue)
+            self.dismiss(animated: true, completion: nil)
+            
+            
+        }
+        scanner.scanFrame = view.bounds
 
         
         
